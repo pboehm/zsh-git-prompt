@@ -19,8 +19,17 @@ add-zsh-hook precmd precmd_update_git_vars
 function preexec_update_git_vars() {
     case "$2" in
         git*)
-        __EXECUTED_GIT_COMMAND=1
-        ;;
+            __EXECUTED_GIT_COMMAND=1
+            ;;
+        vim*)
+            __EXECUTED_GIT_COMMAND=1
+            ;;
+        touch*)
+            __EXECUTED_GIT_COMMAND=1
+            ;;
+        rm*)
+            __EXECUTED_GIT_COMMAND=1
+            ;;
     esac
 }
 
